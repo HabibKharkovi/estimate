@@ -42,6 +42,16 @@ const StylesHeader = makeStyles((theme: Theme) =>
       flexGrow: 1,
       padding: theme.spacing(3),
     },
+    profileBtn: {
+      display: 'flex',
+      alignItems: 'center',
+      marginLeft: 'auto',
+      cursor: "pointer"
+    },
+    accountCircleIcon: {
+      marginRight: 8,
+      fontSize: 32,
+    }
   }),
 );
 

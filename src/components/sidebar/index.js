@@ -4,9 +4,6 @@ import Drawer from '@material-ui/core/Drawer';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -43,10 +40,6 @@ export default function Sidebar({ open, setOpen}) {
       },
 ]
 
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
-
   const theme = createMuiTheme({
     palette: {
       grey: {
@@ -69,11 +62,6 @@ export default function Sidebar({ open, setOpen}) {
           }),
         }}
       >
-        <div className={classes.toolbar}>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon className={classes.arrow}/> : <ChevronLeftIcon className={classes.arrow}/>}
-          </IconButton>
-        </div>
         <Divider />
         <List component="nav" aria-label="secondary">
           {sidebarLinks.map((link, index) => (

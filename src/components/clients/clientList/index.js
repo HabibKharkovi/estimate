@@ -29,7 +29,7 @@ export default function ClientList() {
             }
           ]}
           options={{
-            actionsColumnIndex: -1
+              actionsColumnIndex: -1,
           }}
         
       />

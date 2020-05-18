@@ -18,7 +18,7 @@ function App() {
     <div className="main">
         <Header setOpen={setOpen} open={open}/>
         <Sidebar setOpen={setOpen} open={open}/>
-        <div className="main-content">
+        <div className={open ? "main-content add-margin" : "main-content"}>
           <Switch>
             <Route exact path="/estimates" render={() => <Estimates/>} />
             <Route exact path="/invoices" component={Invoices} />

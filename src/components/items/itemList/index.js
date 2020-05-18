@@ -25,9 +25,9 @@ export default function ItemList() {
               icon: "delete",
             }
           ]}
-          options={{
-            actionsColumnIndex: -1
-          }}
+        options={{
+          actionsColumnIndex: -1,
+        }}
         
       />
     )

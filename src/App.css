@@ -1,9 +1,12 @@
 .main-content {
   margin-top: 64px;
   background-color: #f5f5f5;
-  margin-left: 240px;
+  margin-left: 60px;
   min-height: calc(100vh - 64px);
   padding: 45px;
+}
+.main-content.add-margin {
+  margin-left: 240px;
 }
 .form-sub-heading {
   margin-top: 0;
