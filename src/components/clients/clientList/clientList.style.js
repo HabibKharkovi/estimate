@@ -6,6 +6,14 @@ const styleClientList = makeStyles((theme: Theme) =>
     clientListWrapper: {
         boxShadow: "none",
         border: "none"
+    },
+    btnGroup : {
+      display: "flex",
+      padding: "10px 0",
+      justifyContent: "flex-end",
+    },
+    button : {
+      marginRight: 15
     }
   }),
 );

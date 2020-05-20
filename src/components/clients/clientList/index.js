@@ -2,6 +2,8 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import MaterialTable from 'material-table';
 import VisibilityIcon from '@material-ui/icons/Visibility';
+import DeleteIcon from '@material-ui/icons/Delete';
+import EditIcon from '@material-ui/icons/Edit';
 import styleClientList from './clientList.style';
 
 export default function ClientList() {
@@ -12,26 +14,51 @@ export default function ClientList() {
         title="MY Clients"
         columns={[
           { title: 'Client Name', field: 'name' },
+          { title: 'Phone Number', field: 'phone' },
+          { title: 'City', field: 'city' },
         ]}
         data={[
-          { name: 'Mehmet' },
-          { name: 'Zerya Betül'},
+          { name: 'Mehmet', phone: '234 234 234', city: 'new york' },
+          { name: 'Zerya Betü', phone: '234 234 234', city: 'new york'},
         ]}
-        actions={[
-            {
-              icon: () => <VisibilityIcon/>,
-            },
-            {
-              icon: "edit",
-            },
-            {
-              icon: "delete",
-            }
-          ]}
-          options={{
-              actionsColumnIndex: -1,
-          }}
-        
+        options = {{
+          selection: true,
+        }}
+        onRowClick={(event, rowData, togglePanel) =>  togglePanel()}
+        onSelectionChange={(event, rowData) => console.log(rowData)}
+        detailPanel={rowData => {
+          return (
+            <div className={classes.btnGroup}>
+              <Button
+                variant="contained"
+                color="primary"
+                size="small"
+                className={classes.button}
+                startIcon={<VisibilityIcon />}
+              >
+                Open
+              </Button>
+              <Button
+                variant="contained"
+                color=""
+                size="small"
+                className={classes.button}
+                startIcon={<EditIcon />}
+              >
+                Edit
+              </Button>
+              <Button
+                variant="contained"
+                size="small"
+                color="secondary"
+                className={classes.button}
+                startIcon={<DeleteIcon />}
+              >
+                Delete
+              </Button>
+            </div>
+          )
+        }}
       />
     )
   }

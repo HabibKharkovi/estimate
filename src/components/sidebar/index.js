@@ -36,7 +36,7 @@ export default function Sidebar({ open, setOpen}) {
       },
       {
         text: "Settings",
-        path: "/settings"
+        path: "/settings/account"
       },
 ]
 

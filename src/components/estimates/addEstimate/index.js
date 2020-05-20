@@ -5,9 +5,11 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import styleAddEstimate from './addEstimate.style';
 import ClientList from '../../clients/clientList';
+import EstimatesForm from '../estimatesForm'
 import ItemList from '../../items/itemList';
+import Print from '../../print';
+import styleAddEstimate from './addEstimate.style';
 
 
 function getSteps() {
@@ -21,7 +23,7 @@ function getStepContent(stepIndex) {
     case 1:
         return <ItemList/>;
     case 2:
-        return 'This is the bit I really care about!';
+        return <EstimatesForm/>;
     default:
         return 'Unknown stepIndex';
     }
@@ -44,8 +46,10 @@ function AddEstimate(){
     setActiveStep(0);
   };
 
+  console.log(activeStep);
+
   return (
-    <div className={classes.root}>
+    <div className="add-estimate">
       <Paper elevation={3}>
         <Stepper activeStep={activeStep} alternativeLabel>
             {steps.map((label) => (
@@ -56,7 +60,7 @@ function AddEstimate(){
         </Stepper>
       </Paper>
       <div className={classes.addEstimateWrapper}>
-        <Paper elevation={3} className={classes.left}>
+        <Paper elevation={3} className={activeStep === 2 ? [classes.estimatesForm, classes.left] : classes.left}>
             <div>
                 {activeStep === steps.length ? (
                 <div>
@@ -83,7 +87,7 @@ function AddEstimate(){
             </div>
         </Paper>
         <Paper elevation={3} className={classes.right}>
-
+            <Print/>
         </Paper>
       </div>
     </div>

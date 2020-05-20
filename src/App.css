@@ -24,3 +24,6 @@
   box-shadow: none;
   height: 100%;
 }
+.add-estimate .MuiPaper-elevation2 {
+  box-shadow: none;
+}

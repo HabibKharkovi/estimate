@@ -24,6 +24,9 @@ const styleAddEstimate = makeStyles((theme) => ({
       width: "calc(50% - 15px)",
       marginLeft: 15,
       padding: "20px 30px 30px"
+    },
+    estimatesForm: {
+      padding: 20
     }
   }));
 

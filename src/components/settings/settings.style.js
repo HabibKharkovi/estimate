@@ -10,10 +10,15 @@ const styleSettings = makeStyles((theme: Theme) =>
       maxWidth: 300,
       flex: 300,
       marginRight: 30,
+      alignSelf : 'flex-start'
     },
     right: {
       flex: 1,
       padding: "20px 30px 30px"
+    },
+    link : {
+      color : "black",
+      textDecoration : "none"
     }
   }),
 );

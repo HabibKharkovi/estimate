@@ -1,0 +1,11 @@
+.quick-container {
+    display: flex;
+}
+.quick-container .right {
+    max-width: 60%;
+    flex : 60%
+}
+.quick-container .left {
+    max-width: 40%;
+    flex : 40%
+}

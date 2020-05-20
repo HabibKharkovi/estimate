@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Switch, Route} from 'react-router-dom';
+import { Switch, Route, Redirect} from 'react-router-dom';
 import Estimates from './components/estimates';
 import Invoices from './components/invoices';
 import Clients from './components/clients';
@@ -24,7 +24,7 @@ function App() {
             <Route exact path="/invoices" component={Invoices} />
             <Route exact path="/clients" component={Clients} />
             <Route exact path="/items" component={Items} />
-            <Route exact path="/settings" component={Settings} />
+            <Route exact path="/settings/:id" component={Settings} />
           </Switch>
         </div>
     </div>
