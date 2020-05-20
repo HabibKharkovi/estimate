@@ -55,7 +55,7 @@ function Preferences(){
                 color="secondary"
                 />
             </div>
-            <div className={classes.btnWrapper}>
+            <div className='btn-wrapper'>
                 <Btn>
                     Cancel
                 </Btn>

@@ -6,6 +6,11 @@ const styleSettings = makeStyles((theme: Theme) =>
       width: '100%',
       display: "flex"
     },
+    icon : {
+      width : 25,
+      height : 25
+    },
+    
     left: {
       maxWidth: 300,
       flex: 300,

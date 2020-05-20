@@ -16,6 +16,12 @@ import Contracts from './contracts';
 import QuickBooks from './quick-books';
 import { Link, Switch, Route } from 'react-router-dom';
 import styleSettings from './settings.style';
+import AccountIcon from '../../account.svg' ;
+import CompanyIcon from '../../company.svg' ;
+import DocumentIcon from '../../document.svg' ;
+import PreferenceIcon from '../../preference.svg' ;
+import TaxesIcon from '../../taxes.svg' ;
+import ContractsIcon from '../../contract.svg' ;
 
 export default function Settings(props){
     console.log(props)
@@ -27,8 +33,9 @@ export default function Settings(props){
                 <Link to="/settings/account" className={classes.link}>
                     <ListItem button>
                         <ListItemIcon>
-                            <InboxIcon />
+                            <img src={AccountIcon} className={classes.icon}/>
                         </ListItemIcon>
+                        
                         <ListItemText primary="My Account" />
                     </ListItem>
                 </Link>
@@ -36,7 +43,7 @@ export default function Settings(props){
                 <Link to="/settings/company" className={classes.link}>
                     <ListItem button>
                         <ListItemIcon>
-                            <InboxIcon />
+                            <img src={CompanyIcon} className={classes.icon}/>
                         </ListItemIcon>
                         <ListItemText primary="Company" />
                     </ListItem>
@@ -45,7 +52,7 @@ export default function Settings(props){
                 <Link to="/settings/document" className={classes.link}> 
                     <ListItem button>
                         <ListItemIcon>
-                            <InboxIcon />
+                            <img src={DocumentIcon} className={classes.icon}/>
                         </ListItemIcon>
                         <ListItemText primary="Document" />
                     </ListItem>
@@ -54,7 +61,7 @@ export default function Settings(props){
                 <Link to="/settings/preferences" className={classes.link}>
                     <ListItem button>
                         <ListItemIcon>
-                            <InboxIcon />
+                            <img src={PreferenceIcon} className={classes.icon}/>
                         </ListItemIcon>
                         <ListItemText primary="Preferences" />
                     </ListItem>
@@ -63,7 +70,7 @@ export default function Settings(props){
                 <Link to="/settings/taxes" className={classes.link}>
                     <ListItem button>
                         <ListItemIcon>
-                            <InboxIcon />
+                            <img src={TaxesIcon} className={classes.icon}/>
                         </ListItemIcon>
                         <ListItemText primary="Taxes" />
                     </ListItem>
@@ -72,7 +79,7 @@ export default function Settings(props){
                 <Link to="/settings/contracts" className={classes.link}>
                     <ListItem button>
                         <ListItemIcon>
-                            <InboxIcon />
+                            <img src={ContractsIcon} className={classes.icon}/>
                         </ListItemIcon>
                         <ListItemText primary="Contracts" />
                     </ListItem>

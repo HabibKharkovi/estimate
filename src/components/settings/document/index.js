@@ -28,7 +28,7 @@ function Document(props){
                     label="Notes"
                     />
             </form>
-            <div className={classes.btnWrapper}>
+            <div className="btn-wrapper">
                 <Btn>
                     Cancel
                 </Btn>

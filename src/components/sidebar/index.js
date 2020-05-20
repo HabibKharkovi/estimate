@@ -12,7 +12,11 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import ListItemText from '@material-ui/core/ListItemText';
 import StyleSidebar from './sidebar.style';
-
+import EstimateIcon from '../../estimate.svg';
+import ClientIcon from '../../client.svg';
+import ItemIcon from '../../item.svg';
+import InvoiceIcon from '../../invoice.svg';
+import SettingIcon from '../../settings.svg';
 
 export default function Sidebar({ open, setOpen}) {
   const classes = StyleSidebar();
@@ -20,23 +24,28 @@ export default function Sidebar({ open, setOpen}) {
   const sidebarLinks = [
       {
         text: "Estimates",
-        path: "/estimates"
+        path: "/estimates",
+        imageUrl : EstimateIcon
       },
       {
         text: "Invoices",
-        path: "/invoices"
+        path: "/invoices",
+        imageUrl : InvoiceIcon
       },
       {
         text: "Clients",
-        path: "/clients"
+        path: "/clients",
+        imageUrl : ClientIcon
       },
       {
         text: "Items",
-        path: "/items"
+        path: "/items",
+        imageUrl : ItemIcon
       },
       {
         text: "Settings",
-        path: "/settings/account"
+        path: "/settings/account",
+        imageUrl : SettingIcon
       },
 ]
 
@@ -68,7 +77,7 @@ export default function Sidebar({ open, setOpen}) {
             <Link to={link.path} className={classes.link} key={index}>
                 <ThemeProvider theme={theme}>
                     <ListItem className={classes.manuItem} button >
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon className={classes.icon}/> : <MailIcon className={classes.icon}/>}</ListItemIcon>
+                        <ListItemIcon><img src={link.imageUrl} className={classes.icon}/></ListItemIcon>
                         <ListItemText className={classes.manuLink}>{link.text}</ListItemText>
                     </ListItem>
                 </ThemeProvider>

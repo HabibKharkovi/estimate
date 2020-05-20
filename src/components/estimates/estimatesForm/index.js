@@ -44,7 +44,7 @@ function EstimatesForm(props){
                   className="input-wrapper"
                   name="markup"
                   component={renderTextField}
-                  label="markup"
+                  label="Markup"
                   />
               </div>
               <div>
@@ -58,7 +58,7 @@ function EstimatesForm(props){
               <div>
                   <Field
                   className="input-wrapper"
-                  name="Request a deposit"
+                  name="Request_a_deposit"
                   component={renderTextField}
                   label="Request a deposit"
                   />
@@ -68,7 +68,7 @@ function EstimatesForm(props){
                   className="input-wrapper"
                   name="total"
                   component={renderTextField}
-                  label="Total  (AUD)"
+                  label="Total  (USD)"
                   />
               </div>
               <div className={classes.uploadGroup}>

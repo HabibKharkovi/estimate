@@ -130,7 +130,7 @@ function Company(props){
                   />
               </div>
           </form>
-          <div className={classes.btnWrapper}>
+          <div className='btn-wrapper'>
             <Btn>
                Cancel
             </Btn>
