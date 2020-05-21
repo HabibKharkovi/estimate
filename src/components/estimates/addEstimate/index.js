@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import ClientList from '../../clients/clientList';
 import EstimatesForm from '../estimatesForm'
 import ItemList from '../../items/itemList';
+import Result from '../../result';
 import Print from '../../print';
 import styleAddEstimate from './addEstimate.style';
 
@@ -87,7 +88,8 @@ function AddEstimate(){
             </div>
         </Paper>
         <Paper elevation={3} className={classes.right}>
-            <Print/>
+            {/* <Print/> */}
+            <Result/>
         </Paper>
       </div>
     </div>

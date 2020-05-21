@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
+import Paper from '@material-ui/core/Paper';
 import { Page, Text, View, Document, StyleSheet, PDFDownloadLink, Image } from '@react-pdf/renderer';
  
 
@@ -22,7 +23,7 @@ class PrintContent extends React.Component {
   render() {
     return (
         
-            <Document >
+          <Document >
             <Page size="A4" style={styles.page}>
             <View style={styles.section}>
                 <Text>Section #1 asdf asdf</Text>
@@ -45,16 +46,13 @@ const Print = () => {
   });
  
   return (
-    <div>
-        <div style={{"display": "none"}}>
-
+    <Paper elevation={3}>
       <PrintContent ref={componentRef} />
-        </div>
       <button onClick={handlePrint}>Print this out!</button>
       <PDFDownloadLink document={<PrintContent />} fileName="somename.pdf">
         {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Download now!')}
       </PDFDownloadLink>
-    </div>
+    </Paper>
   );
 };
 
