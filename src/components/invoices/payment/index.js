@@ -3,7 +3,8 @@ import { Field, reduxForm } from 'redux-form';
 import stylePayment from './payment.style';
 import {renderTextField} from '../../../utilies/input';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
-import Btn from '../../../utilies/button';
+import Button from '@material-ui/core/Button';
+
 
 
 function Payment(props){
@@ -14,22 +15,39 @@ function Payment(props){
         <div>
              <h3 className="form-sub-heading">Payment</h3>
              <form className={classes.paymentForm} onSubmit={handleSubmit}>
+                <div className={classes.wrapper}>
+                    <div className={classes.left}>
+                        <Field
+                        className="input-wrapper"
+                        name="payment"
+                        component={renderTextField}
+                        label="Payment"
+                        />
+                    </div>
+                    <div className={classes.root} className={`${classes.buttonWrapper} ${classes.right}`}>
+                        <ButtonGroup color="primary" aria-label="outlined primary button group">
+                            <Button>$</Button>
+                            <Button>%</Button>
+                            <Button>full</Button>
+                        </ButtonGroup>
+                    </div>
+                </div>
                 <div>
                     <Field
                     className="input-wrapper"
-                    name="payment"
+                    name="payment_date"
                     component={renderTextField}
-                    label="Payment"
+                    label="Payment Date"
                     />
                 </div>
-             </form>
-            <div className={classes.root} className={classes.buttonWrapper}>
+                <h3 className="form-sub-heading">Payment Method</h3>
                 <ButtonGroup color="primary" aria-label="outlined primary button group">
-                    <Btn>%</Btn>
-                    <Btn>$</Btn>
-                    <Btn>$</Btn>
+                    <Button>Cash</Button>
+                    <Button>Check</Button>
+                    <Button>Credit</Button>
+                    <Button>Bank Transfer</Button>
                 </ButtonGroup>
-            </div>
+            </form>
         </div>
     )
 }

@@ -18,6 +18,9 @@ createStyles({
       alignItems : 'center',
       padding : '15px 0',
       borderBottom : '1px solid #cabdbd',
+  },
+  contractBtn : {
+    width : 150
   }
   
 }),

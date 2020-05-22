@@ -32,8 +32,8 @@ export default function Settings(props){
             <List component="nav" aria-label="main mailbox folders">
                 <Link to="/settings/account" className={classes.link}>
                     <ListItem button>
-                        <ListItemIcon>
-                            <img src={AccountIcon} className={classes.icon}/>
+                        <ListItemIcon className={classes.iconWrapper}>
+                            <img src={AccountIcon} className={classes.icon} className={classes.accountIcon}/>
                         </ListItemIcon>
                         
                         <ListItemText primary="My Account" />
@@ -42,8 +42,8 @@ export default function Settings(props){
                 <Divider/>
                 <Link to="/settings/company" className={classes.link}>
                     <ListItem button>
-                        <ListItemIcon>
-                            <img src={CompanyIcon} className={classes.icon}/>
+                        <ListItemIcon className={classes.iconWrapper}>
+                            <img src={CompanyIcon} className={classes.restIcon}/>
                         </ListItemIcon>
                         <ListItemText primary="Company" />
                     </ListItem>
@@ -51,8 +51,8 @@ export default function Settings(props){
                 <Divider/>
                 <Link to="/settings/document" className={classes.link}> 
                     <ListItem button>
-                        <ListItemIcon>
-                            <img src={DocumentIcon} className={classes.icon}/>
+                        <ListItemIcon className={classes.iconWrapper}>
+                            <img src={DocumentIcon} className={classes.restIcon}/>
                         </ListItemIcon>
                         <ListItemText primary="Document" />
                     </ListItem>
@@ -60,8 +60,8 @@ export default function Settings(props){
                 <Divider/>
                 <Link to="/settings/preferences" className={classes.link}>
                     <ListItem button>
-                        <ListItemIcon>
-                            <img src={PreferenceIcon} className={classes.icon}/>
+                        <ListItemIcon className={classes.iconWrapper}>
+                            <img src={PreferenceIcon} className={classes.restIcon}/>
                         </ListItemIcon>
                         <ListItemText primary="Preferences" />
                     </ListItem>
@@ -69,7 +69,7 @@ export default function Settings(props){
                 <Divider/>
                 <Link to="/settings/taxes" className={classes.link}>
                     <ListItem button>
-                        <ListItemIcon>
+                        <ListItemIcon className={classes.iconWrapper}>
                             <img src={TaxesIcon} className={classes.icon}/>
                         </ListItemIcon>
                         <ListItemText primary="Taxes" />
@@ -78,7 +78,7 @@ export default function Settings(props){
                 <Divider/>
                 <Link to="/settings/contracts" className={classes.link}>
                     <ListItem button>
-                        <ListItemIcon>
+                        <ListItemIcon className={classes.iconWrapper}>
                             <img src={ContractsIcon} className={classes.icon}/>
                         </ListItemIcon>
                         <ListItemText primary="Contracts" />

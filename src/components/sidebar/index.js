@@ -25,27 +25,32 @@ export default function Sidebar({ open, setOpen}) {
       {
         text: "Estimates",
         path: "/estimates",
-        imageUrl : EstimateIcon
+        imageUrl : EstimateIcon,
+        cls : null
       },
       {
         text: "Invoices",
         path: "/invoices",
-        imageUrl : InvoiceIcon
+        imageUrl : InvoiceIcon,
+        cls : null
       },
       {
         text: "Clients",
         path: "/clients",
-        imageUrl : ClientIcon
+        imageUrl : ClientIcon,
+        cls : 'client',
       },
       {
         text: "Items",
         path: "/items",
-        imageUrl : ItemIcon
+        imageUrl : ItemIcon,
+        cls : null
       },
       {
         text: "Settings",
         path: "/settings/account",
-        imageUrl : SettingIcon
+        imageUrl : SettingIcon,
+        cls : null
       },
 ]
 
@@ -77,8 +82,8 @@ export default function Sidebar({ open, setOpen}) {
             <Link to={link.path} className={classes.link} key={index}>
                 <ThemeProvider theme={theme}>
                     <ListItem className={classes.manuItem} button >
-                        <ListItemIcon><img src={link.imageUrl} className={classes.icon}/></ListItemIcon>
-                        <ListItemText className={classes.manuLink}>{link.text}</ListItemText>
+                        <ListItemIcon><img src={link.imageUrl} className={`${classes.icon} ${link.cls}`} alt='icon'/></ListItemIcon>
+                        <ListItemText className={classes.manuLink}>{link.text}</ListItemText>`
                     </ListItem>
                 </ThemeProvider>
             </Link>

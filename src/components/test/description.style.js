@@ -46,7 +46,7 @@ createStyles({
     pro : {
         backgroundColor : '#3838d3',
         color : '#fff',
-        borderRadius : 5,
+        borderRadius : 3,
         fontSize : 16
     },
     signatureWrapper : {

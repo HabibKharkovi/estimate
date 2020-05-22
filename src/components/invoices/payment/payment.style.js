@@ -1,5 +1,5 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { clearAsyncError } from 'redux-form';
+
 
 const stylePayment = makeStyles((theme: Theme) =>
 createStyles({
@@ -10,6 +10,20 @@ createStyles({
         '& > *': {
             margin: theme.spacing(1),
         }
+    },
+    wrapper: {
+        display : 'flex',
+        alignItems : 'center'
+    },
+    left: {
+        maxWidth : "calc(80% - 10px)",
+        flex : "80%",
+        marginRight : 10
+    },
+    right: {
+        maxWidth : "calc(20% - 10px)",
+        flex : "20%",
+        marginLeft : 10
     }
 }),
 );

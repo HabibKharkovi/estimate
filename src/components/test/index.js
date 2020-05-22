@@ -3,7 +3,7 @@ import { Field, reduxForm } from 'redux-form';
 import styleDescription from './description.style';
 import {renderTextField} from '../../utilies/input';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
-import Btn from '../../utilies/button';
+import Button from '@material-ui/core/Button';
 import Switch from '@material-ui/core/Switch';
 
 function Description(props){
@@ -39,8 +39,8 @@ function Description(props){
                 />
                 <div className={classes.root}  className={classes.buttonWrapper}>
                     <ButtonGroup color="primary" aria-label="outlined primary button group">
-                        <Btn>%</Btn>
-                        <Btn>$</Btn>
+                        <Button>%</Button>
+                        <Button>$</Button>
                     </ButtonGroup>
                 </div>
             </div>
@@ -54,8 +54,8 @@ function Description(props){
                 />
                 <div className={classes.root} className={classes.buttonWrapper}>
                     <ButtonGroup color="primary" aria-label="outlined primary button group">
-                        <Btn>%</Btn>
-                        <Btn>$</Btn>
+                        <Button>%</Button>
+                        <Button>$</Button>
                     </ButtonGroup>
                 </div>
             </div>
@@ -69,8 +69,8 @@ function Description(props){
                 />
                 <div className={classes.root} className={classes.buttonWrapper}>
                     <ButtonGroup color="primary" aria-label="outlined primary button group">
-                        <Btn>%</Btn>
-                        <Btn>$</Btn>
+                        <Button>%</Button>
+                        <Button>$</Button>
                     </ButtonGroup>
                 </div>
             </div>
@@ -93,8 +93,8 @@ function Description(props){
                 </div>
                 <div className={classes.root} className={classes.buttonWrapper}>
                     <ButtonGroup color="primary" aria-label="outlined primary button group">
-                        <Btn>%</Btn>
-                        <Btn>$</Btn>
+                        <Button>%</Button>
+                        <Button>$</Button>
                     </ButtonGroup>
                 </div>
             </div>

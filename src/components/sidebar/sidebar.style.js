@@ -29,9 +29,10 @@ const StyleSidebar = makeStyles((theme: Theme) =>
         textDecoration: "none",
     },
     icon: {
-        color: '#fff',
-        width: 30,
-        height: 30
+        width: 20
+    },
+    client : {
+      width : 27
     },
     manuItem: {
         paddingTop: 15,

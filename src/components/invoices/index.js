@@ -7,8 +7,8 @@ export default function Invoices(){
 
     return (
         <div>
-            {/* <Email/>
-            <Payment/> */}
+            <Email/>
+            <Payment/>
             <Print/>
         </div>
     )

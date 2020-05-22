@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import styleItems from '../items.style';
 import {renderTextField} from '../../../utilies/input';
+import Btn from '../../../utilies/button';
 
 
 function AddItem(props){
@@ -58,6 +59,14 @@ function AddItem(props){
                   />
               </div>
           </form>
+          <div className='btn-wrapper'>
+                <Btn>
+                    Cancel
+                </Btn>
+                <Btn>
+                    Save
+                </Btn>
+            </div>
         </div>
     )
 }

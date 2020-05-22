@@ -7,8 +7,16 @@ const styleSettings = makeStyles((theme: Theme) =>
       display: "flex"
     },
     icon : {
-      width : 25,
-      height : 25
+      width : 21,
+    },
+    accountIcon : {
+      width : 19
+    },
+    iconWrapper : {
+      justifyContent : 'center'
+    },
+    restIcon : {
+      width : 28,
     },
     
     left: {
