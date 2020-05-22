@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import styleClients from '../clients.style';
+import Button from '@material-ui/core/Button';
 import {renderTextField} from '../../../utilies/input';
 import {renderFromHelper} from '../../../utilies/selector'
 import {renderSelectField} from '../../../utilies/selector'
@@ -11,11 +12,11 @@ function EditClient(props){
 
     const classes = styleClients();
 
-    const { handleSubmit } = props
+    const { handleSubmit, edit } = props
 
     return (
         <div className={classes.editClientwrapper}>
-          <h3 className="form-sub-heading">Basic Information</h3>
+          <h3 className="form-sub-heading">Update Basic Information</h3>
           <form className={classes.editClientForm} onSubmit={handleSubmit}>
               <div>
                   <Field
@@ -49,7 +50,7 @@ function EditClient(props){
                   label="Phone (other)"
                   />
               </div>
-              <h3 className="form-sub-heading">Billing Address</h3>
+              <h3 className="form-sub-heading">Update Billing Address</h3>
               <div>
                   <Field
                   className="input-wrapper"
@@ -90,6 +91,9 @@ function EditClient(props){
                   label="Zip / Postal Code"
                   />
               </div>
+
+              <Button variant="contained" size="large" color="primary" type="submit">Update</Button>
+  
           </form>
         </div>
     )
