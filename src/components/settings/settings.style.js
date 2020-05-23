@@ -32,6 +32,9 @@ const styleSettings = makeStyles((theme: Theme) =>
     link : {
       color : "black",
       textDecoration : "none"
+    },
+    text: {
+      paddingLeft: 15,
     }
   }),
 );

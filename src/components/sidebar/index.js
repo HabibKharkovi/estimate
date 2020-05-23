@@ -38,7 +38,7 @@ export default function Sidebar({ open, setOpen}) {
         text: "Clients",
         path: "/clients",
         imageUrl : ClientIcon,
-        cls : 'client',
+        cls : 'client--icon',
       },
       {
         text: "Items",
@@ -83,7 +83,7 @@ export default function Sidebar({ open, setOpen}) {
                 <ThemeProvider theme={theme}>
                     <ListItem className={classes.manuItem} button >
                         <ListItemIcon><img src={link.imageUrl} className={`${classes.icon} ${link.cls}`} alt='icon'/></ListItemIcon>
-                        <ListItemText className={classes.manuLink}>{link.text}</ListItemText>`
+                        <ListItemText className={classes.manuLink}>{link.text}</ListItemText>
                     </ListItem>
                 </ThemeProvider>
             </Link>

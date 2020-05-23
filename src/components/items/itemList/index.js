@@ -1,13 +1,15 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import {useSelector} from 'react-redux';
 import MaterialTable from 'material-table';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import useStyles from './itemList.style';
 
-export default function ItemList() {
+export default function ItemList({onEdit, onShowItem, selectItem}) {
     const classes = useStyles();
+    const items = useSelector(state => state.item.itemList)
     return (
       <MaterialTable
         title="MY Items"
@@ -15,12 +17,9 @@ export default function ItemList() {
           { title: 'Item Name', field: 'name' },
           { title: 'Rate', field: 'rate' },
         ]}
-        data={[
-          { name: 'Item 1', rate: 99 },
-          { name: 'Item 2', rate: 70},
-        ]}
+        data={items}
         options = {{
-          selection: true,
+          selection: selectItem,
         }}
         onRowClick={(event, rowData, togglePanel) =>  togglePanel()}
         onSelectionChange={(event, rowData) => console.log(rowData)}
@@ -31,6 +30,7 @@ export default function ItemList() {
                 variant="contained"
                 color="primary"
                 size="small"
+                onClick={() => onShowItem()}
                 className={classes.button}
                 startIcon={<VisibilityIcon />}
               >
@@ -40,6 +40,7 @@ export default function ItemList() {
                 variant="contained"
                 color=""
                 size="small"
+                onClick={() => onEdit()}
                 className={classes.button}
                 startIcon={<EditIcon />}
               >

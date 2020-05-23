@@ -36,7 +36,7 @@ export default function Settings(props){
                             <img src={AccountIcon} className={classes.icon} className={classes.accountIcon}/>
                         </ListItemIcon>
                         
-                        <ListItemText primary="My Account" />
+                        <ListItemText className={classes.text} primary="My Account" />
                     </ListItem>
                 </Link>
                 <Divider/>
@@ -45,7 +45,7 @@ export default function Settings(props){
                         <ListItemIcon className={classes.iconWrapper}>
                             <img src={CompanyIcon} className={classes.restIcon}/>
                         </ListItemIcon>
-                        <ListItemText primary="Company" />
+                        <ListItemText className={classes.text} primary="Company" />
                     </ListItem>
                 </Link>
                 <Divider/>
@@ -54,7 +54,7 @@ export default function Settings(props){
                         <ListItemIcon className={classes.iconWrapper}>
                             <img src={DocumentIcon} className={classes.restIcon}/>
                         </ListItemIcon>
-                        <ListItemText primary="Document" />
+                        <ListItemText className={classes.text} primary="Document" />
                     </ListItem>
                 </Link>
                 <Divider/>
@@ -63,7 +63,7 @@ export default function Settings(props){
                         <ListItemIcon className={classes.iconWrapper}>
                             <img src={PreferenceIcon} className={classes.restIcon}/>
                         </ListItemIcon>
-                        <ListItemText primary="Preferences" />
+                        <ListItemText className={classes.text} primary="Preferences" />
                     </ListItem>
                 </Link>
                 <Divider/>
@@ -72,7 +72,7 @@ export default function Settings(props){
                         <ListItemIcon className={classes.iconWrapper}>
                             <img src={TaxesIcon} className={classes.icon}/>
                         </ListItemIcon>
-                        <ListItemText primary="Taxes" />
+                        <ListItemText className={classes.text} primary="Taxes" />
                     </ListItem>
                 </Link>
                 <Divider/>
@@ -81,7 +81,7 @@ export default function Settings(props){
                         <ListItemIcon className={classes.iconWrapper}>
                             <img src={ContractsIcon} className={classes.icon}/>
                         </ListItemIcon>
-                        <ListItemText primary="Contracts" />
+                        <ListItemText className={classes.text} primary="Contracts" />
                     </ListItem>
                 </Link>
                 

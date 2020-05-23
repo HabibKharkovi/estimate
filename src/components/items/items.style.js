@@ -10,10 +10,22 @@ const styleItems = makeStyles((theme: Theme) =>
       width: "40%",
       marginRight: 30,
       alignSelf: "flex-start",
+      position: 'relative',
     },
     right: {
       flex: 1,
-      padding: "20px 30px 30px"
+    },
+    primaryPadding: {
+      padding: "20px 30px 30px",
+    },
+    newItem: {
+      position: 'absolute',
+      zIndex: 99,
+      top: 14,
+      left: 150
+    },
+    texWrapper: {
+      marginTop: 30,
     }
   }),
 );

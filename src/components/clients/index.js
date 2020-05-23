@@ -12,14 +12,14 @@ export default function Clients(){
 
     const [ edit, setEdit] = useState(false);
     const [ showClientInfo, setshowClientInfo] = useState(false);
-    const [ selectClient ] = useState(false)
+    const [ selectClient ] = useState(false);
     
     const handleAdd = () => {
         setEdit(false)
         setshowClientInfo(false)
     }
 
-    const handleEdit = () => {
+    const handleEdit = (client) => {
         setEdit(true)
         setshowClientInfo(false)
     }
@@ -33,7 +33,9 @@ export default function Clients(){
         <div className={classes.clientsWrapper}>
             <Paper elevation={3} className={`client-list ${classes.left}`} >
                 {
-                    edit ? <Button onClick={() => handleAdd()} className={classes.newClient} variant="contained" color="primary">New Client</Button> : null
+                    edit || showClientInfo ?  
+                    <Button onClick={() => handleAdd()} className={classes.newClient} variant="contained" color="primary">New Client</Button> 
+                    : null
                 }
                 <ClientList onClientInfoShow={handleshowClientInfo} onEdit={handleEdit} edit={edit}/>
             </Paper>

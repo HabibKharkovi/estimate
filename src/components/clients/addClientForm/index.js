@@ -5,6 +5,7 @@ import {add_client} from '../../../redux/client/clientAction';
 import styleClients from '../clients.style';
 import {renderTextField} from '../../../utilies/input';
 import Button from '@material-ui/core/Button';
+import Chip from '@material-ui/core/Chip';
 import {renderFromHelper} from '../../../utilies/selector'
 import {renderSelectField} from '../../../utilies/selector'
 
@@ -18,13 +19,12 @@ function AddClient(props){
     const { handleSubmit } = props
 
     const submitForm = value => {
-        console.log('value', value)
         dispatch(add_client(value))
     }
 
     return (
         <div className={classes.addClientwrapper}>
-          <h3 className="form-sub-heading">Basic Information</h3>
+          <h3 className="form-sub-heading">Basic Information <Chip style={{marginLeft: 'auto'}} color="primary" label="New Client"/></h3>
           <form className={classes.addClientForm} onSubmit={handleSubmit(submitForm)}>
               <div>
                   <Field

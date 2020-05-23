@@ -1,20 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import styleItems from '../items.style';
+import { useDispatch } from 'react-redux';
+import { add_item } from '../../../redux/item/itemAction';
 import {renderTextField} from '../../../utilies/input';
-import Btn from '../../../utilies/button';
+import Button from '@material-ui/core/Button';
+import Chip from '@material-ui/core/Chip';
+import styleItems from '../items.style';
 
 
 function AddItem(props){
 
     const classes = styleItems();
-
+    const dispatch = useDispatch();
     const { handleSubmit } = props
+
+    const submitForm = value => {
+        console.log('value', value)
+        dispatch(add_item(value))
+    }
 
     return (
         <div className={classes.addItemwrapper}>
-          <h3 className="form-sub-heading">Basic Information</h3>
-          <form className={classes.addItemForm} onSubmit={handleSubmit}>
+          <h3 className="form-sub-heading">Basic Information <Chip style={{marginLeft: 'auto'}} color="primary" label="New Item"/></h3>
+          <form className={classes.addItemForm} onSubmit={handleSubmit(submitForm)}>
               <div>
                   <Field
                   className="input-wrapper"
@@ -31,24 +39,6 @@ function AddItem(props){
                   label="Rate"
                   />
               </div>
-              <h3 className="form-sub-heading">Add Taxes</h3>
-              <div>
-                  <Field
-                  className="input-wrapper"
-                  name="text_name"
-                  component={renderTextField}
-                  label="Text Name"
-                  />
-              </div>
-              <div>
-                  <Field
-                  className="input-wrapper"
-                  name="text_per"
-                  component={renderTextField}
-                  label="Text %"
-                  />
-              </div>
-              <h3 className="form-sub-heading">Tax List</h3>
               <h3 className="form-sub-heading">Description</h3>
               <div>
                   <Field
@@ -58,15 +48,12 @@ function AddItem(props){
                   label="Description"
                   />
               </div>
+                <div className='btn-wrapper'>
+                    <Button variant="contained" size="large" color="primary" type="submit">
+                        Save
+                    </Button>
+                </div>
           </form>
-          <div className='btn-wrapper'>
-                <Btn>
-                    Cancel
-                </Btn>
-                <Btn>
-                    Save
-                </Btn>
-            </div>
         </div>
     )
 }

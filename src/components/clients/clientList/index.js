@@ -1,16 +1,28 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import MaterialTable from 'material-table';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import VisibilityIcon from '@material-ui/icons/Visibility';
+import { select_client } from '../../../redux/client/clientAction';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import styleClientList from './clientList.style';
 
 export default function ClientList({ onEdit, onClientInfoShow, selectClient }) {
     const classes = styleClientList();
+    const dispatch = useDispatch();
 
     const clients = useSelector(state => state.client.clientList )
+
+    const EditClient = value => {
+      dispatch(select_client(value));
+      onEdit();
+    }
+
+    const ShowClientInfo = value => {
+      dispatch(select_client(value));
+      onClientInfoShow();
+    }
 
     return (
       <MaterialTable
@@ -28,14 +40,14 @@ export default function ClientList({ onEdit, onClientInfoShow, selectClient }) {
         }}
         onRowClick={(event, rowData, togglePanel) =>  togglePanel()}
         onSelectionChange={(event, rowData) => console.log(rowData)}
-        detailPanel={rowData => {
+        detailPanel={client => {
           return (
             <div className={classes.btnGroup}>
               <Button
                 variant="contained"
                 color="primary"
                 size="small"
-                onClick = {() => onClientInfoShow()}
+                onClick = {() => ShowClientInfo(client)}
                 className={classes.button}
                 startIcon={<VisibilityIcon />}
               >
@@ -45,7 +57,7 @@ export default function ClientList({ onEdit, onClientInfoShow, selectClient }) {
                 variant="contained"
                 color=""
                 size="small"
-                onClick = {() => onEdit()}
+                onClick = {() => EditClient(client)}
                 className={classes.button}
                 startIcon={<EditIcon />}
               >

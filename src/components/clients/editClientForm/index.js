@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
+import { useSelector, connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
 import styleClients from '../clients.style';
+import { select_client } from '../../../redux/client/clientAction';
 import Button from '@material-ui/core/Button';
+import Chip from '@material-ui/core/Chip';
 import {renderTextField} from '../../../utilies/input';
 import {renderFromHelper} from '../../../utilies/selector'
 import {renderSelectField} from '../../../utilies/selector'
 
  
-
 function EditClient(props){
 
     const classes = styleClients();
 
-    const { handleSubmit, edit } = props
+    const { handleSubmit } = props
 
     return (
         <div className={classes.editClientwrapper}>
-          <h3 className="form-sub-heading">Update Basic Information</h3>
+          <h3 className="form-sub-heading">Basic Information <Chip style={{marginLeft: 'auto'}} color="primary" label="Update Client"/></h3>
           <form className={classes.editClientForm} onSubmit={handleSubmit}>
               <div>
                   <Field
@@ -50,7 +52,7 @@ function EditClient(props){
                   label="Phone (other)"
                   />
               </div>
-              <h3 className="form-sub-heading">Update Billing Address</h3>
+              <h3 className="form-sub-heading">Billing Address</h3>
               <div>
                   <Field
                   className="input-wrapper"
@@ -99,7 +101,16 @@ function EditClient(props){
     )
 }
 
-export default reduxForm({
-    form: 'editClientForm'
-  })(EditClient)
+EditClient = reduxForm({
+    form: 'editClientForm', 
+    enableReinitialize: true,
+})(EditClient)
+
+EditClient = connect(
+    state => ({
+        initialValues: state.client.selectedClient 
+    })          
+)(EditClient)
+
+export default EditClient
   
