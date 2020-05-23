@@ -12,11 +12,11 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import ListItemText from '@material-ui/core/ListItemText';
 import StyleSidebar from './sidebar.style';
-import EstimateIcon from '../../estimate.svg';
-import ClientIcon from '../../client.svg';
-import ItemIcon from '../../item.svg';
-import InvoiceIcon from '../../invoice.svg';
-import SettingIcon from '../../settings.svg';
+import EstimateIcon from '../../assets/svgs/estimate.svg';
+import ClientIcon from '../../assets/svgs/client.svg';
+import ItemIcon from '../../assets/svgs/item.svg';
+import InvoiceIcon from '../../assets/svgs/invoice.svg';
+import SettingIcon from '../../assets/svgs/settings.svg';
 
 export default function Sidebar({ open, setOpen}) {
   const classes = StyleSidebar();

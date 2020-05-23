@@ -16,12 +16,12 @@ import Contracts from './contracts';
 import QuickBooks from './quick-books';
 import { Link, Switch, Route } from 'react-router-dom';
 import styleSettings from './settings.style';
-import AccountIcon from '../../account.svg' ;
-import CompanyIcon from '../../company.svg' ;
-import DocumentIcon from '../../document.svg' ;
-import PreferenceIcon from '../../preference.svg' ;
-import TaxesIcon from '../../taxes.svg' ;
-import ContractsIcon from '../../contract.svg' ;
+import AccountIcon from '../../assets/svgs/account.svg' ;
+import CompanyIcon from '../../assets/svgs/company.svg' ;
+import DocumentIcon from '../../assets/svgs/document.svg' ;
+import PreferenceIcon from '../../assets/svgs/preference.svg' ;
+import TaxesIcon from '../../assets/svgs/taxes.svg' ;
+import ContractsIcon from '../../assets/svgs/contract.svg' ;
 
 export default function Settings(props){
     console.log(props)

@@ -1,0 +1,318 @@
+/*BACKGROUND OVERLAY*/
+.bg-overlay,
+.overlay-dark {
+    position: relative;
+    z-index: 0;
+}
+
+.bg-overlay::after,
+.overlay-dark:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.bg-overlay::after {
+    opacity: 0.94;
+    z-index: -1;
+}
+
+.overlay-dark::after {
+    background-color:#2196f3;
+    opacity: 0.80;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+    z-index: -1;
+}
+
+/*BACKGROUND COLORS*/
+.bg-gray {
+    background-color: #f6f9fe;
+}
+.bg-inherit {
+    background: inherit !important;
+}
+
+.btn,
+.btn:active,
+.btn.sApp-btn:before,
+.bg-overlay::after,
+.benifits-item:after {
+    background-color: #2196f3;
+}
+/*---------- bootstrap nav custom hover ----------*/
+/* ******************************
+:: 8.0 WELCOME AREA CSS
+****************************** */
+.welcome-area {
+    height: 800px;
+    z-index: 1;
+}
+
+.welcome-thumb {
+    max-width: 300px;
+    padding-top: 70px;
+}
+.row-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.banner-text{
+    max-width: 460px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.banner-title {
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.contact-bottom > span a {
+    text-decoration: underline;
+    color: #222;
+}
+
+@media (min-width: 992px) {
+    .download-page .welcome-intro > h1 {
+        font-size: 3.8em;
+    }
+
+    .download-page .welcome-intro p {
+        font-size: 16px;
+    }
+}
+.form-control {
+    font-size: 15px;
+    height: 60px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+.form-check-input {
+    position: absolute;
+    margin-top: 1.3rem;
+    margin-left: -1.25rem;
+}
+
+.form-control:focus {
+    border: none;
+    outline: none;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-form .form-group input {
+    display: block;
+    text-align: center;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-form .form-group input::-webkit-input-placeholder {
+    text-align: center;
+}
+
+.subscribe-form .form-group input:-ms-input-placeholder {
+    text-align: center;
+}
+
+.subscribe-form .form-group input::placeholder {
+    text-align: center;
+}
+
+.subscribe-form button {
+    height: 60px;
+    border-radius: 8px;
+    background: #2196f3  !important;
+}
+.subscribe-form button:hover {
+    background: #1565c0  !important
+}
+.welcome-area .video-icon {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.play-btn {
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.btn-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.play-icon {
+    font-size: 22px;
+    color: #7c4fe0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes grow {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes grow {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.play-animation {
+    -webkit-animation: grow 3s infinite;
+    animation: grow 3s infinite;
+}
+
+.animation-short {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.welcome-area.bg-overlay::after {
+    z-index: -2;
+}
+
+.welcome-area .shape-bottom {
+    z-index: -1;
+}
+
+/*BG SHAPE*/
+.shapes-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.shape {
+    position: relative;
+}
+
+.bg-shape {
+    position: absolute;
+    height: 190%;
+    width: 100%;
+    display: block;
+    border-radius: 120px;
+    background: linear-gradient(-47deg, #8731E8 0%, #4528DC 100%);
+    bottom: 0;
+    right: 0;
+    -webkit-transform: translate(35%,-28%) rotate(-35deg);
+    transform: translate(35%,-28%) rotate(-35deg);
+    z-index: 0;
+}
+
+@media (max-width: 991px) {
+    .bg-shape {
+        height: 130%;
+    }
+}
+
+/*SHAPE DIVIDER*/
+.shape-bottom {
+    position: absolute;
+    top: auto;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+}
+
+.homepage-5 .shape-bottom svg {
+    overflow: hidden;
+    width: 100%;
+    line-height: 0;
+    direction: ltr;
+    transform: rotate(180deg);
+}
+
+/*BACKGROUND OVERLAY*/
+.bg-overlay,
+.overlay-dark {
+    position: relative;
+    z-index: 0;
+}
+
+.bg-overlay::after,
+.overlay-dark:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.bg-overlay::after {
+    opacity: 0.94;
+    z-index: -1;
+}
+
+.overlay-dark::after {
+    background-color:#2196f3;
+    opacity: 0.80;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+    z-index: -1;
+}
+
+/*BACKGROUND COLORS*/
+.bg-gray {
+    background-color: #f6f9fe;
+}
+.bg-inherit {
+    background: inherit !important;
+}
+
+.btn,
+.btn:active,
+.btn.sApp-btn:before,
+.bg-overlay::after,
+.benifits-item:after {
+    background-color: #2196f3;
+}
+
+
+/*BACKGROUND IMAGES*/
