@@ -33,7 +33,7 @@ function App() {
           <Sidebar setOpen={setOpen} open={open}/>
           <div className={open ? "main-content add-margin" : "main-content"}>
             <Switch>
-              <Route exact path="/estimates" render={() => <Estimates/>} />
+              <Route exact path="/" render={() => <Estimates/>} />
               <Route exact path="/invoices" component={Invoices} />
               <Route exact path="/clients" component={Clients} />
               <Route exact path="/items" component={Items} />

@@ -24,7 +24,7 @@ export default function Sidebar({ open, setOpen}) {
   const sidebarLinks = [
       {
         text: "Estimates",
-        path: "/estimates",
+        path: "/",
         imageUrl : EstimateIcon,
         cls : null
       },
