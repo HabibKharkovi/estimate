@@ -43,6 +43,51 @@ export default function Result() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
+            <h3 className="form-sub-heading">Estimate #4223</h3>
+            <div>
+                <div className={classes.row}>
+                        <label className={classes.label}>Estimate #</label>
+                        <span className={classes.value}>4223</span>
+                </div>
+                <div className={classes.row}>
+                    <label className={classes.label}>Date</label>
+                    <span className={classes.value}>05/26/2020</span>
+                </div>
+                <div className={classes.row}>
+                    <label className={classes.label}>PO Number</label>
+                    <span className={classes.value}>0000</span>
+                </div>
+            </div>
+            <TableContainer>
+                <Table className={classes.tableTop} aria-label="spanning table" size="small">
+                    <TableBody>
+                        <TableRow>
+                            <TableCell>Subtotal</TableCell>
+                            <TableCell align="right">$0.00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Markup</TableCell>
+                            <TableCell align="right">$0.00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Discount</TableCell>
+                            <TableCell align="right">$0.00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Request a deposit</TableCell>
+                            <TableCell align="right">$0.00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Tax</TableCell>
+                            <TableCell align="right">$0.00</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Total  (AUD)</TableCell>
+                            <TableCell align="right">$0.00</TableCell>
+                        </TableRow>
+                    </TableBody>
+                </Table>
+            </TableContainer>
             <h3 className="form-sub-heading">Client Information</h3>
             <div className={classes.clientinfo}>
                 <div className={classes.row}>

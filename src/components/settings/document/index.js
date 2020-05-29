@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import styleDocument from './document.style';
 import {renderTextField} from '../../../utilies/input';
-import Btn from '../../../utilies/button'
+import Button from '@material-ui/core/Button';
 
 function Document(props){
     const classes = styleDocument();
@@ -27,15 +27,15 @@ function Document(props){
                     component={renderTextField}
                     label="Notes"
                     />
+                <div className={classes.btnGroup}>
+                    <Button color="primary" variant="contained" size="large" className={classes.mr}>
+                        Cancel
+                    </Button>
+                    <Button color="primary" variant="contained" size="large">
+                        Save
+                    </Button>
+                </div>
             </form>
-            <div className="btn-wrapper">
-                <Btn>
-                    Cancel
-                </Btn>
-                <Btn>
-                    Save
-                </Btn>
-          </div>
         </div>
     )
 }

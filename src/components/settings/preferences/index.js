@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import stylePreferences from './preferences.style';
 import Switch from '@material-ui/core/Switch';
-import Btn from '../../../utilies/button';
+import Button from '@material-ui/core/Button';
 
 function Preferences(){
     const classes = stylePreferences();
@@ -16,15 +16,15 @@ function Preferences(){
       };
     return (
         <div>
-            <div>
+            <div className={classes.marginBottom}>
                 <h3 className='form-sub-heading'>Email Estimate Message</h3>
                 <p className='text'>We are excited about the possibility of working with you.</p>
             </div>
-            <div>
+            <div className={classes.marginBottom}>
                 <h3 className='form-sub-heading'>Email Invoice Message</h3>
                 <p className='text'>Thanks for your business!</p>
             </div>
-            <div>
+            <div className={classes.marginBottom}>
                 <h3 className='form-sub-heading'>Notifications</h3>
                 <p>Turn "On" to receive instant notifications when a client opens or signs your documents.</p>
             </div>
@@ -34,7 +34,7 @@ function Preferences(){
                 checked={state.checkedA}
                 onChange={handleChange}
                 name="checkedA"
-                color="secondary"
+                color="primary"
                 />
             </div>
             <div className={classes.switchContent}>
@@ -43,7 +43,7 @@ function Preferences(){
                 checked={state.checkedB}
                 onChange={handleChange}
                 name="checkedB"
-                color="secondary"
+                color="primary"
                 />
             </div>
             <div className={classes.switchContent}>
@@ -52,16 +52,16 @@ function Preferences(){
                 checked={state.checkedC}
                 onChange={handleChange}
                 name="checkedC"
-                color="secondary"
+                color="primary"
                 />
             </div>
-            <div className='btn-wrapper'>
-                <Btn>
+            <div className={classes.btnGroup}>
+                <Button color="primary" variant="contained" size="large" className={classes.mr}>
                     Cancel
-                </Btn>
-                <Btn>
+                </Button>
+                <Button color="primary" variant="contained" size="large">
                     Save
-                </Btn>
+                </Button>
           </div>
         </div>
     )

@@ -4,8 +4,7 @@ import styleAccount from './account.style';
 import {renderTextField} from '../../../utilies/input';
 import {renderFromHelper} from '../../../utilies/selector';
 import {renderSelectField} from '../../../utilies/selector';
-import Btn from '../../../utilies/button';
-import Description from '../../test';
+import Button from '@material-ui/core/Button';
 
  
 
@@ -49,6 +48,7 @@ function Account(props){
                     name="currency"
                     component={renderSelectField}
                     label="Currency"
+                    data={['Australian Dollar (AUD)', 'Canadian Dollar (CAD)', 'Great Britain Pound (GBP)', 'US Dollar (USD)']}
                     />
                 </div>
                 <div>
@@ -57,19 +57,19 @@ function Account(props){
                     name="locale"
                     component={renderSelectField}
                     label="Locale"
+                    data={['Australia', 'Canada (English)', 'United Kingdom', 'United States']}
                     />
                 </div>
+                <p className={classes.formText}>Locale changes date, number format and language on documents</p>
+                <div className={classes.btnGroup}>
+                    <Button color="primary" variant="contained" size="large" className={classes.mr}>
+                        Cancel
+                    </Button>
+                    <Button color="primary" variant="contained" size="large">
+                        Save
+                    </Button>
+               </div>
             </form>
-            <p className={classes.formText}>Locale changes date, number format and language on documents</p>
-            <div className='btn-wrapper'>
-                <Btn>
-                    Cancel
-                </Btn>
-                <Btn>
-                    Save
-                </Btn>
-            </div>
-            <Description/>
         </div>
     )
 }

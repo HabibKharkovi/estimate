@@ -1,20 +1,13 @@
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { clearAsyncError } from 'redux-form';
 
-const styleDescription = makeStyles((theme: Theme) =>
-createStyles({
-    root: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        '& > *': {
-            margin: theme.spacing(1),
-        }
-    },
+import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    
     inputWrapper : {
-        display : 'flex',
-        alignItems : 'center',
-        marginBottom: 20
+      display : 'flex',
+      alignItems : 'center',
+      marginBottom: 20
     },
     fieldWrapper : {
         display : 'flex',
@@ -80,8 +73,22 @@ createStyles({
         alignItems : 'center',
         borderBottom : "2px solid #d9cfcf",
         padding : '5px 10px 40px 5px'
+    },
+    uploadPhoto: {
+      marginTop: 20
+    },
+    noteClient: {
+      marginTop: 20
+    },
+    btn: {
+      height: 56,
+      width: '50%',
+      fontSize: 18
+    },
+    btnGroup: {
+      width: '100%'
     }
-}),
+  }),
 );
 
-export default styleDescription;
+export default useStyles;

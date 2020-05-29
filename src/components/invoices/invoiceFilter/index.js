@@ -8,7 +8,7 @@ import Box from '@material-ui/core/Box';
 import MaterialTable from 'material-table';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import Button from '@material-ui/core/Button';
-import useStyles from './estimate.style';
+import useStyles from './invoiceFilter.style';
 
 
 function a11yProps(index) {
@@ -18,7 +18,7 @@ function a11yProps(index) {
   };
 }
 
-export default function EstimateFilter({ handleNewEstimate }) {
+export default function InvoiceFilter({ handleNewInvoice }) {
 
   const classes = useStyles();
   const [value, setValue] = React.useState('one');
@@ -34,19 +34,18 @@ export default function EstimateFilter({ handleNewEstimate }) {
           <Tab
             className={classes.tab}
             value="one"
-            label="PENDING"
+            label="Active"
             wrapped
             {...a11yProps('one')}
           />
-          <Tab className={classes.tab} value="two" label="APPROVED" {...a11yProps('two')} />
-          <Tab className={classes.tab} value="three" label="DECLINED" {...a11yProps('three')} />
+          <Tab className={classes.tab} value="two" label="Paid" {...a11yProps('two')} />
         </Tabs>
         <Button 
         className={classes.newEstimateBtn} 
         color="primary" variant="contained" 
-        onClick={() => handleNewEstimate()}
+        onClick={() => handleNewInvoice()}
         size="large">
-        New Estimate
+        New Invoice
         </Button>
       </AppBar>
 
@@ -60,7 +59,8 @@ export default function EstimateFilter({ handleNewEstimate }) {
             { title: 'Total', field: 'total' },
         ]}
         data={[
-            { no: '#456', client_name: 'client name', date: '05/03/2020', status: 'pending', total: 342 },
+            { no: '#426', client_name: 'client name', date: '05/21/2020', status: 'active', total: 864 },
+            { no: '#456', client_name: 'client name', date: '05/21/2020', status: 'active', total: 347 },
         ]}
         options={{
             actionsColumnIndex: -1

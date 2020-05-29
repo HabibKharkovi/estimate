@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Paper from '@material-ui/core/Paper';
-import AddEstimate from './addEstimate';
 import EstimateFilter from './estimateFilter';
+import AddEstimateAndInvoice from '../estimateAndInvoice/addEstimateAndInvoice';
 
 export default function Estimates(){
 
@@ -15,11 +15,12 @@ export default function Estimates(){
         <div>
             {
                 newEstimate ?
-                <AddEstimate/>
+                <AddEstimateAndInvoice/>
                 :
                 <Paper elevator={3}>
                     <EstimateFilter handleNewEstimate={handleNewEstimate}/>
                 </Paper>
+                
             }
         </div>
     )

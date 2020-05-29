@@ -10,7 +10,15 @@ createStyles({
   btnWrapper : {
     margin : "20px 0"
   },
-  
+  btnGroup: {
+    marginTop: 20,
+  },
+  marginBottom: {
+      marginBottom: 30,
+  },
+  mr: {
+      marginRight: 20
+  }
 }),
 );
 

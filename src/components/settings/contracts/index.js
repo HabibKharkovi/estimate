@@ -1,7 +1,7 @@
 import React from 'react';
 import styleContracts from './contracts.style';
 import Switch from '@material-ui/core/Switch';
-import Btn from '../../../utilies/button';
+import Button from '@material-ui/core/Button';
 
 
 function Contracts(){
@@ -25,7 +25,7 @@ function Contracts(){
                         checked={state.checkedA}
                         onChange={handleChange}
                         name="checkedA"
-                        color="secondary"
+                        color="primary"
                     />
                  </div>
                  <div className={classes.wrapper}>
@@ -34,25 +34,18 @@ function Contracts(){
                         checked={state.checkedB}
                         onChange={handleChange}
                         name="checkedB"
-                        color="secondary"
+                        color="primary"
                     />
                  </div>
              </div>
-             <div>
-                 <h3 className={classes.title}>Generic Contract</h3>
-                 <p>By signing this document, the customer agrees to the services and conditions outlined in this document.</p>
-             </div>
-             <div className='btn-wrapper'>
-                <Btn>
-                    New Contract
-                </Btn>
-                <Btn>
+             <div className={classes.btnGroup}>
+                <Button color="primary" variant="contained" size="large" className={classes.mr}>
                     Cancel
-                </Btn>
-                <Btn>
+                </Button>
+                <Button color="primary" variant="contained" size="large">
                     Save
-                </Btn>
-             </div>
+                </Button>
+            </div>
         </div>
     )
 }

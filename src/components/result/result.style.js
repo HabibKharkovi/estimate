@@ -5,6 +5,7 @@ const useStyles = makeStyles((theme: Theme) =>
         row: {
             display: 'flex',
             marginBottom: 15,
+            borderBottom:" 1px solid #ddd",
         },
         colHalf: {
             maxWidth: '50%',
@@ -29,7 +30,15 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         tableCell: {
             width: "15%"
-        }
+        },
+        tableTop: {
+            width: 450,
+            marginLeft: 'auto',
+            marginBottom: 20,
+        },
+        clientinfo: {
+            marginBottom: 20,
+        },
     })
 
 )

@@ -12,8 +12,16 @@ createStyles({
     leftInput : {
         width : "calc(50% - 10px)",
         marginLeft : 10
+    },
+    btnGroup: {
+        marginTop: 20,
+    },
+    marginBottom: {
+        marginBottom: 30,
+    },
+    mr: {
+        marginRight: 20
     }
-  
 }),
 );
 

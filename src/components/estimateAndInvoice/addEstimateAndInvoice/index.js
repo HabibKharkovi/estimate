@@ -6,11 +6,11 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import ClientList from '../../clients/clientList';
-import EstimatesForm from '../estimatesForm'
+import EstimateAndInvoiceForm from '../estimateAndInvoiceForm'
 import ItemList from '../../items/itemList';
 import Result from '../../result';
 import Print from '../../print';
-import styleAddEstimate from './addEstimate.style';
+import useStyles from './addEstimateAndInvoice.style';
 
 
 function getSteps() {
@@ -24,14 +24,14 @@ function getStepContent(stepIndex) {
     case 1:
         return <ItemList/>;
     case 2:
-        return <EstimatesForm/>;
+        return <EstimateAndInvoiceForm/>;
     default:
         return 'Unknown stepIndex';
     }
 }
 
-function AddEstimate(){
-  const classes = styleAddEstimate();
+function AddEstimateAndInvoice(){
+  const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
 
@@ -60,7 +60,7 @@ function AddEstimate(){
             ))}
         </Stepper>
       </Paper>
-      <div className={classes.addEstimateWrapper}>
+      <div className={classes.addEstimateAndInvoiceWrapper}>
         <Paper elevation={3} className={activeStep === 2 ? [classes.estimatesForm, classes.left] : classes.left}>
             <div>
                 {activeStep === steps.length ? (
@@ -80,7 +80,7 @@ function AddEstimate(){
                         Back
                     </Button>
                     <Button variant="contained" color="primary" onClick={handleNext}>
-                        {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                        {activeStep === steps.length - 1 ? 'Save' : 'Next'}
                     </Button>
                     </div>
                 </div>
@@ -96,4 +96,4 @@ function AddEstimate(){
   );
 }
 
-export default AddEstimate;
+export default AddEstimateAndInvoice;

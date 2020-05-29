@@ -7,5 +7,5 @@ export const add_item = (item) => ({
 
 export const edit_item = (item) => ({
     type: EDIT_ITEM,
-    payLoad: item
+    payLoad: item 
 })

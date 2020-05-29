@@ -1,6 +1,6 @@
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 
-const styleAddEstimate = makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
     root: {
       width: '100%',
     },
@@ -11,7 +11,7 @@ const styleAddEstimate = makeStyles((theme) => ({
       marginTop: theme.spacing(1),
       marginBottom: theme.spacing(1),
     },
-    addEstimateWrapper: {
+    addEstimateAndInvoiceWrapper: {
       width: '100%',
       display: "flex",
       marginTop: 30,
@@ -31,4 +31,4 @@ const styleAddEstimate = makeStyles((theme) => ({
   }));
 
 
-export default styleAddEstimate;
+export default useStyles;

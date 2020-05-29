@@ -4,6 +4,7 @@ import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import './selector.style.css';
 
  export const renderFromHelper = ({ touched, error }) => {
     if (!(touched && error)) {
@@ -17,24 +18,22 @@ export  const renderSelectField = ({
     input,
     label,
     meta: { touched, error },
+    data,
     children,
     ...custom
   }) => (
     <FormControl error={touched && error} variant="outlined" className="input-wrapper">
-      <InputLabel id="demo-simple-select-outlined-label">Age</InputLabel>
+      <InputLabel id="select-outlined-label" className='selectLabel'>{label}</InputLabel>
       <Select
-        labelId="demo-simple-select-outlined-label"
-        id="demo-simple-select-outlined"
+        labelId="select-outlined-label"
+        id="select-outlined"
         {...input}
         {...custom}
         inputProps={{
           name: 'age',
         }}
       >
-        <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        {/* {children} */}
+        {data.map(item => <MenuItem value={10}>{item}</MenuItem>)}
       </Select>
       {renderFromHelper({ touched, error })}
     </FormControl>

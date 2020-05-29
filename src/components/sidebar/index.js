@@ -54,14 +54,6 @@ export default function Sidebar({ open, setOpen}) {
       },
 ]
 
-  const theme = createMuiTheme({
-    palette: {
-      grey: {
-        main: '#212121',
-      },
-    },
-  });
-
   return (
       <Drawer
         variant="permanent"
@@ -77,15 +69,13 @@ export default function Sidebar({ open, setOpen}) {
         }}
       >
         <Divider />
-        <List component="nav" aria-label="secondary">
+        <List component="nav" aria-label="primary">
           {sidebarLinks.map((link, index) => (
             <Link to={link.path} className={classes.link} key={index}>
-                <ThemeProvider theme={theme}>
-                    <ListItem className={classes.manuItem} button >
-                        <ListItemIcon><img src={link.imageUrl} className={`${classes.icon} ${link.cls}`} alt='icon'/></ListItemIcon>
-                        <ListItemText className={classes.manuLink}>{link.text}</ListItemText>
-                    </ListItem>
-                </ThemeProvider>
+                <ListItem className={classes.manuItem} button primary>
+                    <ListItemIcon><img src={link.imageUrl} className={`${classes.icon} ${link.cls}`} alt='icon'/></ListItemIcon>
+                    <ListItemText className={classes.manuLink}>{link.text}</ListItemText>
+                </ListItem>
             </Link>
           ))}
         </List>

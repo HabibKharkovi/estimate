@@ -2,7 +2,7 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import styleCompany from './company.style';
 import {renderTextField} from '../../../utilies/input';
-import Btn from '../../../utilies/button'
+import Button from '@material-ui/core/Button';
 
 function Company(props){
     const classes = styleCompany();
@@ -129,15 +129,15 @@ function Company(props){
                   label="Industry"
                   />
               </div>
+                <div className={classes.btnGroup}>
+                    <Button color="primary" variant="contained" size="large" className={classes.mr}>
+                        Cancel
+                    </Button>
+                    <Button color="primary" variant="contained" size="large">
+                        Save
+                    </Button>
+                </div>
           </form>
-          <div className='btn-wrapper'>
-            <Btn>
-               Cancel
-            </Btn>
-            <Btn>
-                Save
-            </Btn>
-          </div>
         </div>
     )
 }

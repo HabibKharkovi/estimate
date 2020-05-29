@@ -7,8 +7,16 @@ createStyles({
         justifyContent : 'space-between',
         alignItems : 'center',
         borderBottom : '1px solid #b8b2b2'
+    },
+    btnGroup: {
+        marginTop: 20,
+    },
+    marginBottom: {
+        marginBottom: 30,
+    },
+    mr: {
+        marginRight: 20
     }
-  
 }),
 );
 

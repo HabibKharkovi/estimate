@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import BannerBg from '../../../assets/svgs/curve.svg';
+import { ReactComponent as BannerBg} from '../../../assets/svgs/curve.svg';
 import './signUp.style.css'
 
 
