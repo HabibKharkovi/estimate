@@ -63,8 +63,8 @@ export default function Header({ setOpen, open }){
                 >
                     <CloseIcon />
                 </IconButton>
-                <Typography variant="h6" noWrap>
-                    Estimates
+                <Typography variant="h6" noWrap className={classes.logoText}>
+                    Esignmax
                 </Typography>
                 <div className={classes.profileBtn} aria-controls="profileIcon" aria-haspopup="true" onClick={handleClick}>
                     <AccountCircleIcon className={classes.accountCircleIcon}/>

@@ -30,6 +30,9 @@ const StylesHeader = makeStyles((theme: Theme) =>
         width: theme.spacing(9) + 1,
       },
     },
+    logoText: {
+      color: '#fff',
+    },
     toolbar: {
       display: 'flex',
       alignItems: 'center',
